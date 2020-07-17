@@ -23,12 +23,12 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["reader"],
+    packages=["nam"],
     include_package_data=True,
     install_requires=["requests", "urllib3"],
     entry_points={
         "console_scripts": [
-            "nexusartifact=nam.__main__:main",
+            "nexus-artifact=nam.__main__:main",
         ]
     },
 )
