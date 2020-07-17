@@ -3,9 +3,13 @@
 
 name: Upload Python Package
 
-on:
-  release:
-    types: [created]
+#on:
+#  release:
+#    types: [created]
+on: 
+  push: 
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -28,4 +32,6 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
         python setup.py sdist bdist_wheel
-        twine upload dist/*
+        
+        
+# -- twine upload dist/*
