@@ -1,7 +1,7 @@
 # __main__.py
 
 from configparser import ConfigParser
-from importlib import resources # Python 3.7+
+##from importlib import resources # Python 3.7+
 import sys
 import requests
 import os
