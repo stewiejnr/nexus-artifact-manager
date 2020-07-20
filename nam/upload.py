@@ -2,6 +2,7 @@
 import os
 import __main__
 
+
 def upload_maven():
     """Upload artifact to Maven 2 repository"""
     params = (('repository', __main__.repository),)
@@ -38,11 +39,11 @@ def upload_maven():
         'maven2.generate-pom': (None, True)  ## dont know if this will work
     }
 
-    response = requests.post(__main__.url, params=params, files=files, auth=__main__.auth, proxies=__main__.proxies, verify=False)
+    response = __main__.requests.post(__main__.url, params=params, files=files, auth=__main__.auth, proxies=__main__.proxies, verify=False)
     if response.status_code == 204:
         print("Nexus Upload successful")
         return sys.exit(0)
-    elif response.status_code == 400 and ("release" in repository or "staging" in repository):
+    elif response.status_code == 400 and ("release" in __main__.repository or "staging" in __main__.repository):
         print("Nexus Upload failed. Please modify version number")
         return sys.exit(1)
     else:
@@ -89,7 +90,7 @@ def upload_raw():
     if response.status_code == 204:
         print("Nexus Upload successful")
         return sys.exit(0)
-    elif response.status_code == 400 and ("release" in repository or "staging" in repository):
+    elif response.status_code == 400 and ("release" in __main__.repository or "staging" in __main__.repository):
         print("Nexus Upload failed. Please modify version number")
         return sys.exit(1)
     else:
