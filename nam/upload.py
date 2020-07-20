@@ -31,7 +31,7 @@ def upload_maven():
 
     files = {
         'maven2.groupId': (None, __main__.directory),
-        'maven2.artifactId': (None, __main__.actual_artifact_name),
+        'maven2.artifactId': (None, actual_artifact_name),
         'maven2.version': (None, versionnumber),
         'maven2.asset1': (artifact_name, open(finalpath, 'rb')),
         'maven2.asset1.extension': (None, extension),
