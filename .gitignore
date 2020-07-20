@@ -5,3 +5,7 @@ dist
 build/*
 
 build
+
+nam/__pycache__/*.cpython-36.pyc
+
+*.pyc

@@ -36,8 +36,8 @@ def assign_parameters():
 
 
 def main():
-    cfg = ConfigParser()
-    cfg.read_string(resources.read_text("reader", "config.txt"))
+    ##cfg = ConfigParser()
+    ##cfg.read_string(resources.read_text("reader", "config.txt"))
     ##url = cfg.get("feed", "url")
 
     if assign_parameters():

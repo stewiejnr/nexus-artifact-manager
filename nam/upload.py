@@ -9,12 +9,23 @@ def upload_maven():
     if ('tar.gz' in artifact_name):
         pass
     
+    longname, file_extension = os.path.splitext(artifact_name)
+    
     artname_lst = artifact_name.split("-", 10)
-    versionnumber, exten = os.path.splitext(artname_lst[-1])
     
-    extension = exten
-    
-    actual_artifact_name = '-'.join(artname_lst[:-1])
+    if file_extension == '.war':
+        versionnumber = artname_lst[-2]
+        extension = 'war'
+        actual_artifact_name = '-'.join(artname_lst[:-2])
+    elif file_extension == '.zip':
+        versionnumber = artname_lst[-1]
+        extension = 'zip'
+        actual_artifact_name = '-'.join(artname_lst[:-1])
+    else:
+        extension = file_extension[1:]
+        versionnumber = artname_lst[-1]
+        actual_artifact_name = '-'.join(artname_lst[:-1])
+
 
     files = {
         'maven2.groupId': (None, directory),
