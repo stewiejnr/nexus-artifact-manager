@@ -23,4 +23,4 @@ jobs:
         pip install bumpversion
     - name: Build and publish
       run: |
-        bumpversion --current-version 1.0.0 minor setup.py nam/__init__.py
+        # bumpversion --current-version 1.0.0 minor setup.py nam/__init__.py
