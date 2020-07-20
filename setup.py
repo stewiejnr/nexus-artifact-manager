@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="nexus-artifact-manager",
-    version="1.1.6",
+    version="1.1.7",
     description="Upload and Download artifact from Nexus v3+ repository",
     long_description=README,
     long_description_content_type="text/markdown",
