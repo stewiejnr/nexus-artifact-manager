@@ -43,11 +43,11 @@ def main():
     if assign_parameters():
         print("Nexus Format entered: ", nexus_format)
         if nexus_format == 'raw' and len(sys.argv) == 9:
-            upload_raw()
+            upload.upload_raw()
         elif nexus_format == 'npm' and len(sys.argv)  == 8:
-            upload_npm()
+            upload.upload_npm()
         elif nexus_format == 'maven' and len(sys.argv) == 9:
-            upload_maven()
+            upload.upload_maven()
         else:
             print("Nexus Repository format choosen does not have correct amount of parameters")
             print("Number of arguments entered: ", len(sys.argv))
