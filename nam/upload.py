@@ -33,7 +33,7 @@ def upload_maven():
         'maven2.groupId': (None, __main__.directory),
         'maven2.artifactId': (None, actual_artifact_name),
         'maven2.version': (None, versionnumber),
-        'maven2.asset1': (artifact_name, open(finalpath, 'rb')),
+        'maven2.asset1': (__main__.artifact_name, open(finalpath, 'rb')),
         'maven2.asset1.extension': (None, extension),
         'maven2.generate-pom': (None, True)  ## dont know if this will work
     }
