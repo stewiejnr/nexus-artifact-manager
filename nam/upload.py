@@ -1,4 +1,5 @@
 ## upload.py
+import os
 import __main__
 
 def upload_maven():
