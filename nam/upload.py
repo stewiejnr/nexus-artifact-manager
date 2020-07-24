@@ -22,7 +22,7 @@ def upload_maven():
         extension = 'war'
         actual_artifact_name = '-'.join(artname_lst[:-2])
     elif file_extension == '.zip':
-        versionnumber = artname_lst[-1]
+        versionnumber = artname_lst[-1].strip(file_extension)
         extension = 'zip'
         actual_artifact_name = '-'.join(artname_lst[:-1])
     else:
