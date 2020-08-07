@@ -39,6 +39,7 @@ def main():
     ##cfg = ConfigParser()
     ##cfg.read_string(resources.read_text("reader", "config.txt"))
     ##url = cfg.get("feed", "url")
+    print("Copyright \N{COPYRIGHT SIGN} 2020 Stewartium\n")
 
     if assign_parameters():
         print("Nexus Format entered: ", nexus_format)
